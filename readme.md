@@ -58,7 +58,7 @@ export CERTORAKEY={ключ, который пришел на почту}
 git clone https://github.com/Certora/solana-cvt/ 
 ```
 
-### Уязвимые контракты
+## Уязвимые контракты
 
 Находятся в папке [contracts](./contracts).
 
@@ -88,7 +88,7 @@ path = "relative/path/to/solana-cvt"
 - Создать pubkey - `cvt::CVT_nondet_pubkey()`
 - Создать аккаунт - `cvt::nondet::<AccountInfo>()`
 - Создать числовое значение `cvt::nondet::<u64>()` - вместо u64 можно использовать поддерживаемый solana тип.
-- Ограничить недетерминируемое значение - `cvt::CVT_assume(predicate(nondet_val))` - например, чтобы сказать SMT солверу, что u64 значение ограничено, можно написать `cvt::CVT_assume(amount > 0 && amount < 10)`
+- Ограничить недетерминированное значение - `cvt::CVT_assume(predicate(nondet_val))` - например, чтобы сказать SMT солверу, что u64 значение ограничено, можно написать `cvt::CVT_assume(amount > 0 && amount < 10)`
 - Ассерт - `cvt::CVT_assert(wallet_after.balance == amount)`
 
 В целом этих базовых вещей уже достаточно для очень комплексных проверок.
