@@ -1,0 +1,3 @@
+[submodule "solana-cvt"]
+	path = solana-cvt
+	url = https://github.com/Certora/solana-cvt.git
